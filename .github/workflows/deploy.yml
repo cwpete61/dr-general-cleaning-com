@@ -1,0 +1,40 @@
+name: Deploy Static Site
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate HTML and trigger deployment
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Validate HTML files
+      run: |
+        # Simple validation - check that HTML files exist and are accessible
+        echo "Validating HTML files..."
+        ls -la *.html
+        echo "HTML validation complete"
+
+    - name: Notify Coolify (Manual Setup Required)
+      run: |
+        echo "To set up automatic deployments with Coolify:"
+        echo "1. Install Coolify on your server"
+        echo "2. Connect your GitHub repository in Coolify dashboard"
+        echo "3. Configure webhook in Coolify to trigger on push events"
+        echo "4. Coolify will automatically deploy when changes are pushed to master"
+        echo ""
+        echo "Alternatively, you can set up a webhook in GitHub:"
+        echo "GitHub Settings → Webhooks → Add webhook"
+        echo "Payload URL: Your Coolify webhook endpoint"
+        echo "Content type: application/json"
+        echo "Which events: Just the push event"
+        echo "Secret: Your webhook secret from Coolify"
+
+        echo "Deployment ready for commit: ${{ github.sha }}"

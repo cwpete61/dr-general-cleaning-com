@@ -1,0 +1,23 @@
+{
+  "name": "dr-general-cleaning-com",
+  "version": "1.0.0",
+  "description": "DR General Cleaning website - Professional cleaning services",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build process needed'",
+    "dev": "python -m http.server 8000",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "cleaning",
+    "services",
+    "website",
+    "static"
+  ],
+  "author": "DR General Cleaning",
+  "license": "MIT",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
