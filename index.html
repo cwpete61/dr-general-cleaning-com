@@ -106,6 +106,142 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.1);
         }
+
+        /* About Us Section Styles */
+        .aboutus {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .aboutus .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .aboutus .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            height: 400px;
+        }
+
+        .aboutus .image-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .aboutus .image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .aboutus .image-item.large {
+            grid-row: span 2;
+        }
+
+        .aboutus .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .aboutus .content {
+            padding-left: 20px;
+        }
+
+        .aboutus .content h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .aboutus .content h1 .highlight {
+            color: #4169E1;
+            font-weight: 600;
+        }
+
+        .aboutus .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .aboutus .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4169E1, #2b4cb3);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(65, 105, 225, 0.3);
+        }
+
+        .aboutus .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(65, 105, 225, 0.4);
+            background: linear-gradient(135deg, #2b4cb3, #1e3a8a);
+        }
+
+        @media (max-width: 768px) {
+            .aboutus .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .aboutus .content {
+                padding-left: 0;
+                order: -1;
+            }
+
+            .aboutus .content h1 {
+                font-size: 2rem;
+            }
+
+            .aboutus .image-grid {
+                height: 300px;
+            }
+
+            .aboutus {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .aboutus .content h1 {
+                font-size: 1.8rem;
+            }
+
+            .aboutus .content p {
+                font-size: 1rem;
+            }
+
+            .aboutus .image-grid {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .aboutus .image-item {
+                height: 200px;
+            }
+
+            .aboutus .image-item.large {
+                grid-row: span 1;
+            }
+        }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-white scroll-smooth">
@@ -233,6 +369,31 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="aboutus" id="aboutus">
+        <div class="container">
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop" alt="Professional floor cleaning">
+                </div>
+                <div class="image-item large">
+                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=600&fit=crop" alt="Clean modern kitchen">
+                </div>
+                <div class="image-item">
+                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=300&fit=crop" alt="Cleaning supplies and fresh plants">
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>Trusted Local <span class="highlight">Home Cleaners</span><br><span class="highlight">at Your Service</span></h1>
+
+                <p>DR General Cleaning offers top-tier house cleaning across Allentown, specializing in dependable and thorough cleaning solutions. Serving the community since 2015, our professional team guarantees satisfaction with every job. Whether you need a one-time deep clean or regular maintenance, our expert staff is here to simplify your life and keep your home spotlessly clean.</p>
+
+                <a href="#quote" class="cta-button">Get A Quote</a>
             </div>
         </div>
     </section>
