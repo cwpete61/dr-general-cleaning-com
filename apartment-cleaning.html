@@ -26,18 +26,29 @@
         /* Dropdown menu styles */
         .dropdown:hover .dropdown-menu {
             display: block;
+            animation: fadeIn 0.2s ease-in;
         }
 
-        /* Fix dropdown menu staying open when hovering over it */
+        /* Keep dropdown open for 3 seconds after mouse leaves */
+        .dropdown-menu {
+            background: white !important;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-menu,
         .dropdown-menu:hover {
             display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown:not(:hover) .dropdown-menu:not(:hover) {
+            opacity: 0;
+            visibility: hidden;
+            transition-delay: 3s;
         }
 
         /* Change menu from blue to white with black text */
-        .dropdown-menu {
-            background: white !important;
-        }
-
         .dropdown-menu a {
             color: black !important;
         }
@@ -45,6 +56,17 @@
         .dropdown-menu a:hover {
             background: #f1f5f9 !important;
             color: #4169E1 !important;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -74,29 +96,25 @@
                         </div>
                     </div>
 
-                    <a href="index.html#features" class="text-white hover:text-blue-100 transition-colors duration-300">Features</a>
                     <a href="index.html#benefits" class="text-white hover:text-blue-100 transition-colors duration-300">Benefits</a>
-                    <a href="index.html#testimonials" class="text-white hover:text-blue-100 transition-colors duration-300">Testimonials</a>
-                    <a href="index.html#about" class="text-white hover:text-blue-100 transition-colors duration-300">About</a>
                     <a href="index.html#contact" class="text-white hover:text-blue-100 transition-colors duration-300">Contact</a>
+                    <a href="areas-served.html" class="text-white hover:text-blue-100 transition-colors duration-300">Areas Served</a>
                 </div>
                 <button class="mobile-menu-button md:hidden text-white hover:text-blue-100 focus:outline-none" aria-label="Toggle mobile menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-            <div class="mobile-menu hidden md:hidden mt-4 bg-[#4169E1] rounded-lg shadow-lg">
-                <a href="index.html" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Home</a>
-                <a href="house-cleaning.html" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">House Cleaning</a>
-                <a href="apartment-cleaning.html" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Apartment Cleaning</a>
-                <a href="office-cleaning.html" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Office Cleaning</a>
-                <a href="move-in-cleaning.html" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Move-In Cleaning</a>
-                <a href="move-out-cleaning.html" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Move-Out Cleaning</a>
-                <a href="post-construction-cleaning.html" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Post-Construction Cleaning</a>
-                <a href="index.html#features" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Features</a>
-                <a href="index.html#benefits" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Benefits</a>
-                <a href="index.html#testimonials" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Testimonials</a>
-                <a href="index.html#about" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">About</a>
-                <a href="index.html#contact" class="block px-4 py-2 text-white hover:bg-[#2b4cb3] transition-colors duration-300">Contact</a>
+            <div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-lg">
+                <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Home</a>
+                <a href="house-cleaning.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">House Cleaning</a>
+                <a href="apartment-cleaning.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Apartment Cleaning</a>
+                <a href="office-cleaning.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Office Cleaning</a>
+                <a href="move-in-cleaning.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Move-In Cleaning</a>
+                <a href="move-out-cleaning.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Move-Out Cleaning</a>
+                <a href="post-construction-cleaning.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Post-Construction Cleaning</a>
+                <a href="index.html#benefits" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Benefits</a>
+                <a href="index.html#contact" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Contact</a>
+                <a href="areas-served.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-[#4169E1] transition-colors duration-300">Areas Served</a>
             </div>
         </nav>
     </header>
