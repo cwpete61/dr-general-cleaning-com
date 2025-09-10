@@ -29,7 +29,7 @@
             animation: fadeIn 0.2s ease-in;
         }
 
-        /* Keep dropdown open for 3 seconds after mouse leaves */
+        /* Keep dropdown open for 5 seconds after mouse leaves */
         .dropdown-menu {
             background: white !important;
             transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -45,10 +45,10 @@
         .dropdown:not(:hover) .dropdown-menu:not(:hover) {
             opacity: 0;
             visibility: hidden;
-            transition-delay: 3s;
+            transition-delay: 5s;
         }
 
-        /* Change menu from blue to white with black text */
+        /* White background with black text for all menus */
         .dropdown-menu a {
             color: black !important;
         }
