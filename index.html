@@ -18,31 +18,31 @@
 </head>
 <body class="font-sans antialiased text-gray-800 bg-white scroll-smooth">
     <!-- Header -->
-    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <header class="fixed w-full bg-blue-800 backdrop-blur-sm shadow-sm z-50">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="https://cwpete61.github.io/dr-general-cleaning-2025-09-10-8pyk6" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors duration-300">
-                    DR General Cleaning
+                <a href="https://cwpete61.github.io/dr-general-cleaning-2025-09-10-8pyk6" class="flex items-center">
+                    <img src="assets/logos/header/DR-GEneral-Cleaning_Logo_WEB.png" alt="DR General Cleaning" class="h-16 w-auto">
                 </a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
-                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Features</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Benefits</a>
-                    <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Testimonials</a>
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                    <a href="#home" class="text-white hover:text-blue-200 transition-colors duration-300">Home</a>
+                    <a href="#features" class="text-white hover:text-blue-200 transition-colors duration-300">Features</a>
+                    <a href="#benefits" class="text-white hover:text-blue-200 transition-colors duration-300">Benefits</a>
+                    <a href="#testimonials" class="text-white hover:text-blue-200 transition-colors duration-300">Testimonials</a>
+                    <a href="#about" class="text-white hover:text-blue-200 transition-colors duration-300">About</a>
+                    <a href="#contact" class="text-white hover:text-blue-200 transition-colors duration-300">Contact</a>
                 </div>
-                <button class="mobile-menu-button md:hidden text-gray-600 hover:text-blue-600 focus:outline-none" aria-label="Toggle mobile menu">
+                <button class="mobile-menu-button md:hidden text-white hover:text-blue-200 focus:outline-none" aria-label="Toggle mobile menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-            <div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-lg">
-                <a href="#home" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Home</a>
-                <a href="#features" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Features</a>
-                <a href="#benefits" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Benefits</a>
-                <a href="#testimonials" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Testimonials</a>
-                <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">About</a>
-                <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            <div class="mobile-menu hidden md:hidden mt-4 bg-blue-800 rounded-lg shadow-lg">
+                <a href="#home" class="block px-4 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Home</a>
+                <a href="#features" class="block px-4 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Features</a>
+                <a href="#benefits" class="block px-4 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="block px-4 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Testimonials</a>
+                <a href="#about" class="block px-4 py-2 text-white hover:bg-blue-700 transition-colors duration-300">About</a>
+                <a href="#contact" class="block px-4 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Contact</a>
             </div>
         </nav>
     </header>
@@ -286,7 +286,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
             const mobileMenu = document.querySelector('header nav .mobile-menu');
-            
+
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
